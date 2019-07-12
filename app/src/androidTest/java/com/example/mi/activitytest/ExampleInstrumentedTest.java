@@ -37,10 +37,10 @@ public class ExampleInstrumentedTest extends BaseTest{
         assertEquals("com.example.mi.activitytest", appContext.getPackageName());
     }
     @Test
-    public void openWX() throws IOException, InterruptedException {
+    public void openApp() throws IOException, InterruptedException {
         Log.i("ExampleInstrumentedTest", "openWX>>>");
 //        Init.device.executeShellCommand("am start -n com.tencent.mm/com.tencent.mm.ui.LauncherUI");
-        Init.device.executeShellCommand("am start -n com.example.mi.activitytest/com.example.mi.activitytest.MainActivity");
+        device.executeShellCommand("am start -n com.example.mi.activitytest/com.example.mi.activitytest.MainActivity");
 
 //        UiObject2 moreButton = device.findObject(By.text("更多"));
 //        UiObject2 loginButton = device.findObject(By.text("登录其他帐号"));
@@ -48,9 +48,8 @@ public class ExampleInstrumentedTest extends BaseTest{
 //        moreButton.click();
 //        Thread.sleep(2000);
 //        loginButton.click();
+
         Thread.sleep(5000);
-
-
 
     }
 
