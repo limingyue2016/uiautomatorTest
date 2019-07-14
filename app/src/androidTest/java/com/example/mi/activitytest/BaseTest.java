@@ -39,7 +39,7 @@ public class BaseTest {
         targetContext = instrumentation.getTargetContext(); //指向宿主applicationId
 
         // Start from the home screen
-        device.pressHome();
+//        device.pressHome();
     }
 
     @After
