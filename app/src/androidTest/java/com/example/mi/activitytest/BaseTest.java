@@ -2,6 +2,7 @@ package com.example.mi.activitytest;
 
 import android.app.Instrumentation;
 import android.content.Context;
+import android.content.Intent;
 import android.os.RemoteException;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.uiautomator.UiDevice;
@@ -11,6 +12,8 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+
+import java.io.IOException;
 
 
 public class BaseTest {
@@ -60,6 +63,30 @@ public class BaseTest {
     @AfterClass
     public static void afterClass() {
         Log.i("BaseTest", "afterClass");
+    }
+
+
+//    启动app
+    void startAPP(UiDevice uiDevice, String sPackageName, String sLaunchActivity){
+        try {
+            uiDevice.executeShellCommand("am start -n " + sPackageName+"/"+sLaunchActivity);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+//  intent启动app
+    private void startAPP(String sPackageName){
+        Intent intent = context.getPackageManager().getLaunchIntentForPackage(sPackageName);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        context.startActivity(intent);
+    }
+//  关闭app
+    private void closeAPP(UiDevice uiDevice, String sPackageName) {
+        try {
+            uiDevice.executeShellCommand("am force-stop" + sPackageName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
