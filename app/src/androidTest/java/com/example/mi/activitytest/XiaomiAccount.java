@@ -24,6 +24,6 @@ public class XiaomiAccount extends BaseTest {
         account.click();
 
         device.pressBack();
-//        device.pressBack();
+        device.pressBack();
     }
 }
