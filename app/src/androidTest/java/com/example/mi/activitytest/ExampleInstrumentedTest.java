@@ -56,7 +56,7 @@ public class ExampleInstrumentedTest extends BaseTest {
         int count = uiCollections.getChildCount(new UiSelector().className("android.widget.Button"));
         Log.i(TAG, "openApp------------------------: "+count);
 
-//        closeAPP(device,mPackageName);
+        closeAPP(device,mPackageName);
 
     }
 }
