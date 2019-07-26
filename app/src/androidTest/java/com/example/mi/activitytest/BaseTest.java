@@ -75,13 +75,13 @@ public class BaseTest {
         }
     }
 //  intent启动app
-    private void startAPP(String sPackageName){
+    void startAPP(String sPackageName){
         Intent intent = context.getPackageManager().getLaunchIntentForPackage(sPackageName);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
     }
 //  关闭app
-    private void closeAPP(UiDevice uiDevice, String sPackageName) {
+    void closeAPP(UiDevice uiDevice, String sPackageName) {
         try {
             uiDevice.executeShellCommand("am force-stop" + sPackageName);
         } catch (IOException e) {
