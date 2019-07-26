@@ -13,10 +13,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
 public class XiaomiAccount extends BaseTest {
+
 //    模拟用户点击 设置-小米帐号 操作
     @Test
     public void aboutPhone () throws UiObjectNotFoundException {
         UiObject2 uiObject2 = device.findObject(By.text("设置"));
+
         uiObject2.click();
 
         UiScrollable settings = new UiScrollable(new UiSelector().className("android.widget.FrameLayout"));
