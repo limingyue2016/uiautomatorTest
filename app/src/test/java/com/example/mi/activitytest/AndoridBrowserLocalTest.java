@@ -22,11 +22,11 @@ public class AndoridBrowserLocalTest
     public void beforeTest() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.APPIUM_VERSION, "7.1.0");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"Appium");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "5c3d0c32");
-        capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "383e849d");
+        capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
         capabilities.setCapability("newCommandTimeout", 2000);
         mobiledriver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
