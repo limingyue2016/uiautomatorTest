@@ -30,4 +30,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 //    uiautomator
     androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.1'
+    androidTestImplementation 'org.testng:testng:6.10'
+    testImplementation 'org.testng:testng:6.10'
+    androidTestImplementation 'io.appium:java-client:7.1.0'
+    testImplementation 'io.appium:java-client:7.1.0'
 }
